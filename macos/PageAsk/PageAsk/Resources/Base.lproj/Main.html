@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../Style.css">
+    <script src="../Script.js" defer></script>
+</head>
+<body>
+    <img src="../Icon.png" width="128" height="128" alt="PageAsk">
+    <h1 class="pa-title">页问 PageAsk</h1>
+    <p class="pa-sub">用自己的 LLM API Key，对任意网页提问、翻译与总结</p>
+
+    <p class="pa-steps-title">使用步骤</p>
+    <ol class="pa-steps">
+        <li>点击下方按钮，在 <b>Safari 设置 → 扩展</b> 中勾选启用 <b>PageAsk Extension</b>。</li>
+        <li>打开任意网页，点击 Safari 工具栏的 <b>页问</b> 图标打开右侧面板。</li>
+        <li>点击面板底部 <b>⚙ 设置</b>，选择服务商（DeepSeek / GLM / Kimi / 自定义）并填入你自己的 API Key，然后「测试连接」。</li>
+        <li>回到网页即可翻译、总结或直接对当前页面提问。</li>
+    </ol>
+
+    <p class="state-unknown">PageAsk 扩展尚未开启。请在 Safari 设置的扩展列表中启用它。</p>
+    <p class="state-on">PageAsk 扩展已开启。现在可以打开任意网页，点击工具栏图标开始使用。</p>
+    <p class="state-off">PageAsk 扩展当前处于关闭状态。可在下方 Safari 设置中重新开启。</p>
+
+    <button class="open-preferences">打开 Safari 扩展设置…</button>
+
+    <p class="pa-foot">API Key 只保存在本机浏览器存储中；提问时页面文本将发送到你选择的服务商。</p>
+</body>
+</html>

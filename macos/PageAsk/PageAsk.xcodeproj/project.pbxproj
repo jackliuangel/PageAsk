@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04E959923049B5EC00ED797B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E959913049B5EC00ED797B /* AppDelegate.swift */; };
+		04E959963049B5EC00ED797B /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 04E959943049B5EC00ED797B /* Main.html */; };
+		04E959983049B5EC00ED797B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E959973049B5EC00ED797B /* Icon.png */; };
+		04E9599A3049B5EC00ED797B /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 04E959993049B5EC00ED797B /* Style.css */; };
+		04E9599C3049B5EC00ED797B /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 04E9599B3049B5EC00ED797B /* Script.js */; };
+		04E9599E3049B5EC00ED797B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9599D3049B5EC00ED797B /* ViewController.swift */; };
+		04E959A13049B5EC00ED797B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E9599F3049B5EC00ED797B /* Main.storyboard */; };
+		04E959A33049B5EC00ED797B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E959A23049B5EC00ED797B /* Assets.xcassets */; };
+		04E959AA3049B5EC00ED797B /* PageAsk Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 04E959A93049B5EC00ED797B /* PageAsk Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		04E959AF3049B5EC00ED797B /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E959AE3049B5EC00ED797B /* SafariWebExtensionHandler.swift */; };
+		04E959C13049B5ED00ED797B /* settings in Resources */ = {isa = PBXBuildFile; fileRef = 04E959BB3049B5ED00ED797B /* settings */; };
+		04E959C23049B5ED00ED797B /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 04E959BC3049B5ED00ED797B /* background.js */; };
+		04E959C33049B5ED00ED797B /* content in Resources */ = {isa = PBXBuildFile; fileRef = 04E959BD3049B5ED00ED797B /* content */; };
+		04E959C43049B5ED00ED797B /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 04E959BE3049B5ED00ED797B /* icons */; };
+		04E959C53049B5ED00ED797B /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E959BF3049B5ED00ED797B /* manifest.json */; };
+		04E959C63049B5ED00ED797B /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 04E959C03049B5ED00ED797B /* lib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04E959AB3049B5EC00ED797B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04E959863049B5EC00ED797B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04E959A83049B5EC00ED797B;
+			remoteInfo = "PageAsk Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04E959B63049B5EC00ED797B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04E959AA3049B5EC00ED797B /* PageAsk Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04E9598E3049B5EC00ED797B /* PageAsk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageAsk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E959913049B5EC00ED797B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04E959953049B5EC00ED797B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		04E959973049B5EC00ED797B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		04E959993049B5EC00ED797B /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		04E9599B3049B5EC00ED797B /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		04E9599D3049B5EC00ED797B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04E959A03049B5EC00ED797B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04E959A23049B5EC00ED797B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04E959A43049B5EC00ED797B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E959A93049B5EC00ED797B /* PageAsk Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PageAsk Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E959AE3049B5EC00ED797B /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		04E959B03049B5EC00ED797B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04E959BB3049B5ED00ED797B /* settings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings; path = Resources/settings; sourceTree = "<group>"; };
+		04E959BC3049B5ED00ED797B /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		04E959BD3049B5ED00ED797B /* content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = content; path = Resources/content; sourceTree = "<group>"; };
+		04E959BE3049B5ED00ED797B /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		04E959BF3049B5ED00ED797B /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		04E959C03049B5ED00ED797B /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = Resources/lib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04E9598B3049B5EC00ED797B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E959A63049B5EC00ED797B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04E959853049B5EC00ED797B = {
+			isa = PBXGroup;
+			children = (
+				04E959903049B5EC00ED797B /* PageAsk */,
+				04E959AD3049B5EC00ED797B /* PageAsk Extension */,
+				04E9598F3049B5EC00ED797B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04E9598F3049B5EC00ED797B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04E9598E3049B5EC00ED797B /* PageAsk.app */,
+				04E959A93049B5EC00ED797B /* PageAsk Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04E959903049B5EC00ED797B /* PageAsk */ = {
+			isa = PBXGroup;
+			children = (
+				04E959913049B5EC00ED797B /* AppDelegate.swift */,
+				04E9599D3049B5EC00ED797B /* ViewController.swift */,
+				04E9599F3049B5EC00ED797B /* Main.storyboard */,
+				04E959A23049B5EC00ED797B /* Assets.xcassets */,
+				04E959A43049B5EC00ED797B /* Info.plist */,
+				04E959933049B5EC00ED797B /* Resources */,
+			);
+			path = PageAsk;
+			sourceTree = "<group>";
+		};
+		04E959933049B5EC00ED797B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04E959943049B5EC00ED797B /* Main.html */,
+				04E959973049B5EC00ED797B /* Icon.png */,
+				04E959993049B5EC00ED797B /* Style.css */,
+				04E9599B3049B5EC00ED797B /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04E959AD3049B5EC00ED797B /* PageAsk Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04E959BA3049B5ED00ED797B /* Resources */,
+				04E959AE3049B5EC00ED797B /* SafariWebExtensionHandler.swift */,
+				04E959B03049B5EC00ED797B /* Info.plist */,
+			);
+			path = "PageAsk Extension";
+			sourceTree = "<group>";
+		};
+		04E959BA3049B5ED00ED797B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04E959BB3049B5ED00ED797B /* settings */,
+				04E959BC3049B5ED00ED797B /* background.js */,
+				04E959BD3049B5ED00ED797B /* content */,
+				04E959BE3049B5ED00ED797B /* icons */,
+				04E959BF3049B5ED00ED797B /* manifest.json */,
+				04E959C03049B5ED00ED797B /* lib */,
+			);
+			name = Resources;
+			path = "PageAsk Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04E9598D3049B5EC00ED797B /* PageAsk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E959B73049B5EC00ED797B /* Build configuration list for PBXNativeTarget "PageAsk" */;
+			buildPhases = (
+				04E9598A3049B5EC00ED797B /* Sources */,
+				04E9598B3049B5EC00ED797B /* Frameworks */,
+				04E9598C3049B5EC00ED797B /* Resources */,
+				04E959B63049B5EC00ED797B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04E959AC3049B5EC00ED797B /* PBXTargetDependency */,
+			);
+			name = PageAsk;
+			packageProductDependencies = (
+			);
+			productName = PageAsk;
+			productReference = 04E9598E3049B5EC00ED797B /* PageAsk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04E959A83049B5EC00ED797B /* PageAsk Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04E959B33049B5EC00ED797B /* Build configuration list for PBXNativeTarget "PageAsk Extension" */;
+			buildPhases = (
+				04E959A53049B5EC00ED797B /* Sources */,
+				04E959A63049B5EC00ED797B /* Frameworks */,
+				04E959A73049B5EC00ED797B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PageAsk Extension";
+			packageProductDependencies = (
+			);
+			productName = "PageAsk Extension";
+			productReference = 04E959A93049B5EC00ED797B /* PageAsk Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04E959863049B5EC00ED797B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					04E9598D3049B5EC00ED797B = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					04E959A83049B5EC00ED797B = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 04E959893049B5EC00ED797B /* Build configuration list for PBXProject "PageAsk" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04E959853049B5EC00ED797B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 04E9598F3049B5EC00ED797B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04E9598D3049B5EC00ED797B /* PageAsk */,
+				04E959A83049B5EC00ED797B /* PageAsk Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04E9598C3049B5EC00ED797B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E959983049B5EC00ED797B /* Icon.png in Resources */,
+				04E959A13049B5EC00ED797B /* Main.storyboard in Resources */,
+				04E9599C3049B5EC00ED797B /* Script.js in Resources */,
+				04E959963049B5EC00ED797B /* Main.html in Resources */,
+				04E959A33049B5EC00ED797B /* Assets.xcassets in Resources */,
+				04E9599A3049B5EC00ED797B /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E959A73049B5EC00ED797B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E959C63049B5ED00ED797B /* lib in Resources */,
+				04E959C33049B5ED00ED797B /* content in Resources */,
+				04E959C43049B5ED00ED797B /* icons in Resources */,
+				04E959C53049B5ED00ED797B /* manifest.json in Resources */,
+				04E959C23049B5ED00ED797B /* background.js in Resources */,
+				04E959C13049B5ED00ED797B /* settings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04E9598A3049B5EC00ED797B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E9599E3049B5EC00ED797B /* ViewController.swift in Sources */,
+				04E959923049B5EC00ED797B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04E959A53049B5EC00ED797B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04E959AF3049B5EC00ED797B /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04E959AC3049B5EC00ED797B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04E959A83049B5EC00ED797B /* PageAsk Extension */;
+			targetProxy = 04E959AB3049B5EC00ED797B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04E959943049B5EC00ED797B /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E959953049B5EC00ED797B /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		04E9599F3049B5EC00ED797B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E959A03049B5EC00ED797B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04E959B13049B5EC00ED797B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04E959B23049B5EC00ED797B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		04E959B43049B5EC00ED797B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBPK2B85XA;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PageAsk Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PageAsk Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pageask.macos.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04E959B53049B5EC00ED797B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBPK2B85XA;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PageAsk Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PageAsk Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pageask.macos.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		04E959B83049B5EC00ED797B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBPK2B85XA;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PageAsk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PageAsk;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pageask.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		04E959B93049B5EC00ED797B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBPK2B85XA;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PageAsk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PageAsk;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pageask.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04E959893049B5EC00ED797B /* Build configuration list for PBXProject "PageAsk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E959B13049B5EC00ED797B /* Debug */,
+				04E959B23049B5EC00ED797B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E959B33049B5EC00ED797B /* Build configuration list for PBXNativeTarget "PageAsk Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E959B43049B5EC00ED797B /* Debug */,
+				04E959B53049B5EC00ED797B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04E959B73049B5EC00ED797B /* Build configuration list for PBXNativeTarget "PageAsk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04E959B83049B5EC00ED797B /* Debug */,
+				04E959B93049B5EC00ED797B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04E959863049B5EC00ED797B /* Project object */;
+}

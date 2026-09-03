@@ -1,0 +1,159 @@
+/* PageAsk 设置页样式 —— 与面板视觉风格一致。 */
+:root {
+  --pa-accent: #3556df;
+  --pa-accent-2: #2f5de0;
+  --pa-bg: #ffffff;
+  --pa-bg-soft: #f4f6fb;
+  --pa-text: #1c2230;
+  --pa-text-2: #5f6673;
+  --pa-border: #dde2ec;
+  --pa-ok: #178a4a;
+  --pa-ok-bg: #e7f6ec;
+  --pa-error: #c62828;
+  --pa-error-bg: #fdeeee;
+  --pa-radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--pa-bg-soft);
+  color: var(--pa-text);
+  font: 14px/1.6 -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+}
+
+a { color: var(--pa-accent); }
+code {
+  background: #eceff5; border-radius: 5px; padding: 1px 5px;
+  font: 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ---- header ---- */
+.pa-s-head {
+  background: linear-gradient(120deg, #2f4fd6, #3556df 55%, #4b6aee);
+  color: #fff; padding: 22px 28px 18px;
+}
+.pa-s-brand { display: flex; align-items: center; gap: 14px; max-width: 780px; margin: 0 auto; }
+.pa-s-logo {
+  width: 44px; height: 44px; border-radius: 12px; flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.18);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 24px; font-weight: 800; letter-spacing: 1px;
+}
+.pa-s-brand h1 { margin: 0; font-size: 19px; line-height: 1.3; }
+.pa-s-sub { margin: 2px 0 0; opacity: 0.88; font-size: 12.5px; }
+
+/* ---- main ---- */
+.pa-s-main { max-width: 780px; margin: 0 auto; padding: 20px 28px 48px; }
+
+.pa-s-sec {
+  background: var(--pa-bg); border: 1px solid var(--pa-border);
+  border-radius: var(--pa-radius); padding: 16px 18px 18px; margin-bottom: 14px;
+}
+.pa-s-title { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+.pa-s-desc { margin: 0 0 12px; font-size: 12.5px; color: var(--pa-text-2); }
+.pa-s-desc.pa-s-warn {
+  background: #fdf7ea; border: 1px solid #e8cf9e; color: #8a6110;
+  border-radius: 8px; padding: 7px 10px; margin-bottom: 12px;
+}
+
+/* provider cards */
+.pa-s-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.pa-pcard {
+  border: 1.5px solid var(--pa-border); border-radius: var(--pa-radius);
+  padding: 12px 13px; cursor: pointer; background: var(--pa-bg);
+  transition: border-color 0.12s, box-shadow 0.12s, background 0.12s;
+}
+.pa-pcard:hover { border-color: #b9c6e8; }
+.pa-pcard.on {
+  border-color: var(--pa-accent); background: #f1f4fe;
+  box-shadow: 0 0 0 2px rgba(53, 86, 223, 0.14);
+}
+.pa-pcard .pa-pc-t { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; }
+.pa-pcard .pa-pc-tag {
+  font-size: 10px; font-weight: 800; padding: 1px 7px; border-radius: 999px;
+  background: #e7ecfb; color: var(--pa-accent);
+}
+.pa-pcard.on .pa-pc-tag { background: var(--pa-accent); color: #fff; }
+.pa-pcard .pa-pc-d { font-size: 12px; color: var(--pa-text-2); margin-top: 5px; }
+
+/* sites */
+.pa-s-sites { display: flex; flex-wrap: wrap; gap: 10px; }
+.pa-ssite {
+  flex: 1 1 200px; border: 1.5px solid var(--pa-border); border-radius: 10px;
+  padding: 9px 12px; cursor: pointer; background: var(--pa-bg);
+}
+.pa-ssite.on { border-color: var(--pa-accent); background: #f1f4fe; }
+.pa-ssite b { display: block; font-size: 13px; }
+.pa-ssite small { color: var(--pa-text-2); font-size: 11.5px; }
+
+/* fields */
+.pa-s-field { margin-top: 13px; }
+.pa-s-field > label { display: flex; align-items: baseline; gap: 6px; font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+.pa-s-link { font-size: 12px; font-weight: 400; margin-left: auto; text-decoration: none; }
+.pa-s-link:hover { text-decoration: underline; }
+.pa-s-tag {
+  font-size: 10px; font-weight: 700; color: var(--pa-accent);
+  background: #e7ecfb; border-radius: 999px; padding: 0 7px;
+}
+.pa-s-field input[type="text"],
+.pa-s-field input[type="password"],
+.pa-s-field input[type="number"],
+.pa-s-field select {
+  width: 100%; border: 1.5px solid var(--pa-border); border-radius: 9px;
+  padding: 8px 11px; font: inherit; color: var(--pa-text);
+  background: var(--pa-bg); outline: none;
+}
+.pa-s-field input:focus, .pa-s-field select:focus { border-color: var(--pa-accent); }
+.pa-s-keyrow { display: flex; gap: 8px; }
+.pa-s-keyrow input { flex: 1 1 auto; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.pa-s-icobtn {
+  flex: 0 0 auto; width: 38px; border: 1.5px solid var(--pa-border); border-radius: 9px;
+  background: var(--pa-bg); cursor: pointer; font-size: 15px;
+}
+.pa-s-icobtn:hover { background: var(--pa-bg-soft); }
+.pa-s-hint { margin: 5px 0 0; font-size: 12px; color: var(--pa-text-2); }
+.pa-s-hint.pa-s-warn { color: #a05e03; }
+.pa-s-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* actions */
+.pa-s-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 4px; }
+.pa-s-actions button {
+  border-radius: 10px; padding: 9px 18px; font-size: 13.5px; font-weight: 600;
+  border: 0; cursor: pointer;
+}
+.pa-s-primary { background: var(--pa-accent); color: #fff; }
+.pa-s-primary:hover { background: var(--pa-accent-2); }
+.pa-s-ghost {
+  background: var(--pa-bg); border: 1.5px solid var(--pa-border) !important;
+  color: var(--pa-text);
+}
+.pa-s-ghost:hover { border-color: var(--pa-accent) !important; color: var(--pa-accent); }
+.pa-s-ghost:disabled { opacity: 0.55; cursor: default; }
+.pa-s-danger { background: var(--pa-bg); border: 1.5px solid #e6c3c3 !important; color: var(--pa-error); }
+.pa-s-danger:hover { background: var(--pa-error); color: #fff; border-color: var(--pa-error) !important; }
+
+/* status */
+.pa-s-status {
+  margin-top: 12px; border-radius: 10px; padding: 11px 14px; font-size: 13px;
+}
+.pa-s-status.ok { background: var(--pa-ok-bg); color: #0e5c32; border: 1px solid #b7e2c6; }
+.pa-s-status.err { background: var(--pa-error-bg); color: var(--pa-error); border: 1px solid #f3c4c4; }
+.pa-s-status.busy { background: var(--pa-bg-soft); color: var(--pa-text-2); border: 1px solid var(--pa-border); }
+.pa-s-status .pa-ss-t { font-weight: 700; }
+.pa-s-status code { background: rgba(0, 0, 0, 0.06); }
+
+/* footer */
+.pa-s-foot {
+  margin-top: 18px; color: var(--pa-text-2); font-size: 12px;
+  border-top: 1px solid var(--pa-border); padding-top: 12px;
+}
+.pa-s-foot p { margin: 3px 0; }
+
+@media (max-width: 620px) {
+  .pa-s-main { padding: 14px 14px 36px; }
+  .pa-s-row2 { grid-template-columns: 1fr; gap: 0; }
+}

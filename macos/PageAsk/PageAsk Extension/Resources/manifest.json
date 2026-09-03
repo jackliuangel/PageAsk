@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "PageAsk",
+  "version": "0.1.0",
+  "description": "用你自己的 LLM API Key（DeepSeek / GLM / Kimi / 自定义）对当前网页提问、翻译与总结。Ask, translate and summarize the page you are reading with your own LLM API key.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "PageAsk · 对网页提问"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "settings/settings.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://api.deepseek.com/*",
+    "https://api.z.ai/*",
+    "https://open.bigmodel.cn/*",
+    "https://api.moonshot.ai/*",
+    "http://localhost/*",
+    "https://localhost/*",
+    "http://127.0.0.1/*",
+    "https://127.0.0.1/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lib/md.js", "lib/extract.js", "content/panel-ui.js", "content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

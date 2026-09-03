@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>页问 · 设置</title>
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <header class="pa-s-head">
+    <div class="pa-s-brand">
+      <span class="pa-s-logo" aria-hidden="true">页</span>
+      <div>
+        <h1>页问 PageAsk · 设置</h1>
+        <p class="pa-s-sub">接入你自己的大模型 API，在任意网页上翻译 / 总结 / 提问。</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="pa-s-main">
+    <form id="pa-form" autocomplete="off">
+      <!-- 1. 服务商 -->
+      <section class="pa-s-sec">
+        <h2 class="pa-s-title">1 · 选择服务商</h2>
+        <p class="pa-s-desc" id="pa-prov-note"></p>
+        <div class="pa-s-grid" id="pa-s-providers" role="radiogroup" aria-label="服务商"></div>
+      </section>
+
+      <!-- 2. 站点/区域 -->
+      <section class="pa-s-sec" id="pa-s-site-sec" hidden>
+        <h2 class="pa-s-title">2 · 站点 / 区域</h2>
+        <p class="pa-s-desc pa-s-warn" id="pa-site-warn"></p>
+        <div class="pa-s-sites" id="pa-s-sites" role="radiogroup" aria-label="站点"></div>
+      </section>
+
+      <!-- 3. 接口配置 -->
+      <section class="pa-s-sec" id="pa-s-api-sec">
+        <h2 class="pa-s-title"><span id="pa-sec-api-no">3</span> · 接口配置</h2>
+
+        <div class="pa-s-field" id="pa-baseurl-row" hidden>
+          <label for="pa-baseurl">Base URL（OpenAI 兼容端点）</label>
+          <input id="pa-baseurl" type="text" spellcheck="false"
+                 placeholder="https://your-gateway.example.com/v1" />
+          <p class="pa-s-hint" id="pa-endpoint-hint"></p>
+          <p class="pa-s-hint pa-s-warn" id="pa-host-note" hidden>
+            非 localhost 域名默认无访问权限：需在 <code>manifest.json</code> 的
+            <code>host_permissions</code> 中手动追加该域名后重新加载扩展。
+          </p>
+        </div>
+
+        <div class="pa-s-field">
+          <label for="pa-key">API Key
+            <a class="pa-s-link" id="pa-keylink" target="_blank" rel="noopener">去申请 ↗</a>
+          </label>
+          <div class="pa-s-keyrow">
+            <input id="pa-key" type="password" spellcheck="false"
+                   placeholder="sk-…" />
+            <button type="button" id="pa-keyeye" class="pa-s-icobtn" title="显示 / 隐藏">👁</button>
+          </div>
+          <p class="pa-s-hint">Key 仅保存在本机扩展存储中（storage.local），不会同步、不会上传到第三方。</p>
+        </div>
+
+        <div class="pa-s-field">
+          <label for="pa-model">模型名称
+            <span class="pa-s-tag" id="pa-model-tag">可编辑</span>
+          </label>
+          <input id="pa-model" type="text" spellcheck="false" list="pa-modelsug" />
+          <datalist id="pa-modelsug"></datalist>
+          <p class="pa-s-hint" id="pa-model-hint"></p>
+        </div>
+      </section>
+
+      <!-- 4. 输出偏好 -->
+      <section class="pa-s-sec">
+        <h2 class="pa-s-title"><span id="pa-sec-pref-no">4</span> · 输出偏好</h2>
+        <div class="pa-s-row2">
+          <div class="pa-s-field">
+            <label for="pa-lang">回答语言</label>
+            <select id="pa-lang"></select>
+          </div>
+          <div class="pa-s-field">
+            <label for="pa-maxchars">网页正文上限（字符）</label>
+            <input id="pa-maxchars" type="number" min="2000" max="200000" step="1000" />
+            <p class="pa-s-hint">正文过长时按此截取并提示。Kimi K3 等长上下文模型可调大。</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pa-s-actions">
+        <button type="submit" id="pa-save" class="pa-s-primary">保存设置</button>
+        <button type="button" id="pa-test" class="pa-s-ghost">测试连接</button>
+        <button type="button" id="pa-clear" class="pa-s-danger">清空全部数据</button>
+      </div>
+    </form>
+
+    <div id="pa-status" class="pa-s-status" hidden aria-live="polite"></div>
+
+    <footer class="pa-s-foot">
+      <p><b>隐私与安全</b>：面板提问时，当前网页的正文/选区文本会发送到你选择的模型服务商；
+      Key 只在扩展后台使用（content 页面无法读取）。请仅在自己信任的服务商填入 Key。</p>
+      <p>页问是一个开源纯前端 Safari 扩展。问题反馈见项目 README。</p>
+    </footer>
+  </main>
+
+  <script src="../lib/browser.js"></script>
+  <script src="../lib/providers.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>
