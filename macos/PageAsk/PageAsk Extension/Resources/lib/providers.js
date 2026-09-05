@@ -107,7 +107,7 @@
       keys: {},       // keyIdFor(...) -> api key
       models: {},     // keyIdFor(...) -> chosen model
       custom: { baseUrl: "", model: "" },
-      prefs: { lang: "简体中文", maxChars: 16000 },
+      prefs: { lang: "简体中文", maxChars: 16000, customPrompt: "" },
     };
   }
 
@@ -135,6 +135,10 @@
           raw.prefs && Number.isFinite(raw.prefs.maxChars)
             ? Math.max(2000, Math.min(200000, Math.round(raw.prefs.maxChars)))
             : base.prefs.maxChars,
+        customPrompt:
+          raw.prefs && typeof raw.prefs.customPrompt === "string"
+            ? raw.prefs.customPrompt
+            : base.prefs.customPrompt,
       },
     };
     return s;

@@ -103,6 +103,17 @@ describe("buildMessages — translate", () => {
 });
 
 describe("buildMessages — ask", () => {
+  it("appends a custom prompt to the built-in system prompt", () => {
+    const msgs = Pr.buildMessages({
+      task: "ask",
+      lang: "English",
+      customPrompt: "Use concise bullet points.",
+      userText: "What matters?",
+    });
+    assert.ok(msgs[0].content.includes("网页阅读助理"));
+    assert.ok(msgs[0].content.includes("用户自定义指令：\nUse concise bullet points."));
+  });
+
   it("grounds the system prompt and carries the userText question", () => {
     const q = "这篇文章的主要结论是什么？";
     const msgs = Pr.buildMessages({

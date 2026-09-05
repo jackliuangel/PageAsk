@@ -216,7 +216,7 @@
       keys: {},       // keyIdFor(...) -> api key
       models: {},     // keyIdFor(...) -> chosen model
       custom: { baseUrl: "", model: "" },
-      prefs: { lang: "简体中文", maxChars: 16000 },
+      prefs: { lang: "简体中文", maxChars: 16000, customPrompt: "" },
     };
   }
 
@@ -244,6 +244,10 @@
           raw.prefs && Number.isFinite(raw.prefs.maxChars)
             ? Math.max(2000, Math.min(200000, Math.round(raw.prefs.maxChars)))
             : base.prefs.maxChars,
+        customPrompt:
+          raw.prefs && typeof raw.prefs.customPrompt === "string"
+            ? raw.prefs.customPrompt
+            : base.prefs.customPrompt,
       },
     };
     return s;
@@ -646,6 +650,11 @@
 3. 回答使用${lang}。回答需简洁、有条理。`;
   }
 
+  function withCustomPrompt(systemPrompt, customPrompt) {
+    const extra = typeof customPrompt === "string" ? customPrompt.trim() : "";
+    return extra ? `${systemPrompt}\n\n用户自定义指令：\n${extra}` : systemPrompt;
+  }
+
   function buildMessages(payload) {
     const lang = LANGS.includes(payload.lang) ? payload.lang : defaultLang();
     const title = payload.pageTitle || "";
@@ -660,7 +669,7 @@
     const messages = [];
 
     if (task === "translate") {
-      messages.push({ role: "system", content: buildTranslateSystem(lang) });
+      messages.push({ role: "system", content: withCustomPrompt(buildTranslateSystem(lang), payload.customPrompt) });
       const body = payload.pageText || "";
       const user =
         `请把网页 ${header} 的正文完整翻译成${lang}。` +
@@ -668,14 +677,14 @@
         `\n\n【正文开始】\n${body}\n【正文结束】`;
       messages.push({ role: "user", content: user });
     } else if (task === "selection-translate") {
-      messages.push({ role: "system", content: buildTranslateSystem(lang) });
+      messages.push({ role: "system", content: withCustomPrompt(buildTranslateSystem(lang), payload.customPrompt) });
       const body = payload.pageText || payload.userText || "";
       messages.push({
         role: "user",
         content: `请把以下选中内容翻译成${lang}：\n\n"""\n${body}\n"""`,
       });
     } else if (task === "summarize") {
-      messages.push({ role: "system", content: buildSummarizeSystem(lang) });
+      messages.push({ role: "system", content: withCustomPrompt(buildSummarizeSystem(lang), payload.customPrompt) });
       const user =
         `请总结网页 ${header} 的正文。` +
         notice +
@@ -683,7 +692,7 @@
       messages.push({ role: "user", content: user });
     } else {
       // ask — grounded Q&A
-      messages.push({ role: "system", content: buildAskSystem(lang) });
+      messages.push({ role: "system", content: withCustomPrompt(buildAskSystem(lang), payload.customPrompt) });
       const parts = [];
       if (payload.usedSelection) {
         parts.push(
@@ -919,6 +928,7 @@ async function handleAsk(port, msg) {
     truncated: Boolean(msg.truncated),
     charCount: msg.charCount || (msg.pageText || "").length,
     lang: msg.lang || (state.prefs && state.prefs.lang) || "简体中文",
+    customPrompt: (state.prefs && state.prefs.customPrompt) || "",
     usedSelection: Boolean(msg.usedSelection),
   });
 

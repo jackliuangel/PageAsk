@@ -78,7 +78,7 @@ describe("defaultState", () => {
       keys: {},
       models: {},
       custom: { baseUrl: "", model: "" },
-      prefs: { lang: "简体中文", maxChars: 16000 },
+      prefs: { lang: "简体中文", maxChars: 16000, customPrompt: "" },
     });
   });
 });
@@ -120,6 +120,11 @@ describe("normalizeState", () => {
   it("falls back to the default when maxChars is not finite", () => {
     assert.strictEqual(P.normalizeState({ prefs: { maxChars: "3000" } }).prefs.maxChars, 16000);
     assert.strictEqual(P.normalizeState({ prefs: { maxChars: NaN } }).prefs.maxChars, 16000);
+  });
+
+  it("keeps a string custom prompt and defaults invalid values", () => {
+    assert.strictEqual(P.normalizeState({ prefs: { customPrompt: " concise answers " } }).prefs.customPrompt, " concise answers ");
+    assert.strictEqual(P.normalizeState({ prefs: { customPrompt: 42 } }).prefs.customPrompt, "");
   });
 
   it("copies keys/models and only keeps string custom fields", () => {

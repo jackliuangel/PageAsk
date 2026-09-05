@@ -212,6 +212,7 @@ async function handleAsk(port, msg) {
     truncated: Boolean(msg.truncated),
     charCount: msg.charCount || (msg.pageText || "").length,
     lang: msg.lang || (state.prefs && state.prefs.lang) || "简体中文",
+    customPrompt: (state.prefs && state.prefs.customPrompt) || "",
     usedSelection: Boolean(msg.usedSelection),
   });
 

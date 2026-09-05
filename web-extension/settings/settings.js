@@ -33,6 +33,7 @@
     modelsug: $("pa-modelsug"),
     lang: $("pa-lang"),
     maxchars: $("pa-maxchars"),
+    customPrompt: $("pa-custom-prompt"),
     save: $("pa-save"),
     test: $("pa-test"),
     clear: $("pa-clear"),
@@ -82,6 +83,7 @@
     }
     state.prefs.lang = els.lang.value;
     state.prefs.maxChars = Math.round(Number(els.maxchars.value) || 16000);
+    state.prefs.customPrompt = els.customPrompt.value;
   }
 
   function refreshApi() {
@@ -143,6 +145,7 @@
     }
     els.lang.value = state.prefs.lang;
     els.maxchars.value = state.prefs.maxChars;
+    els.customPrompt.value = state.prefs.customPrompt;
   }
 
   function escapeHtml(s) {
@@ -271,6 +274,7 @@
   els.model.addEventListener("input", () => commitForm());
   els.lang.addEventListener("change", () => commitForm());
   els.maxchars.addEventListener("input", () => commitForm());
+  els.customPrompt.addEventListener("input", () => commitForm());
 
   els.form.addEventListener("submit", async (e) => {
     e.preventDefault();

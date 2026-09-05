@@ -108,6 +108,12 @@ code {
   background: var(--pa-bg); outline: none;
 }
 .pa-s-field input:focus, .pa-s-field select:focus { border-color: var(--pa-accent); }
+.pa-s-field textarea {
+  width: 100%; min-height: 112px; resize: vertical; border: 1.5px solid var(--pa-border);
+  border-radius: 9px; padding: 8px 11px; font: inherit; line-height: 1.5;
+  color: var(--pa-text); background: var(--pa-bg); outline: none;
+}
+.pa-s-field textarea:focus { border-color: var(--pa-accent); }
 .pa-s-keyrow { display: flex; gap: 8px; }
 .pa-s-keyrow input { flex: 1 1 auto; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .pa-s-icobtn {
